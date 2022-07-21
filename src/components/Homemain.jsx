@@ -13,7 +13,7 @@ const Homemain = () => {
                 i can make full stack web applications with very modern up to date resources
             </p>
             <div>
-                <button className='text-white group border-2 px-5 py-2 my-2 flex items-center hover:bg-yellow-500 hover:border-yellow-500 hover:px-2 duration-300 hover:py-3'> Projects 
+                <button className='text-white group border-2 px-5 py-2 my-2 flex items-center hover:bg-yellow-500 hover:border-yellow-500 hover:pr-1 duration-300 hover:pb-4'> Projects 
                     <span className='group-hover:rotate-90 duration-300'>
                         <HiArrowNarrowRight className='ml-4'/>
                     </span>
