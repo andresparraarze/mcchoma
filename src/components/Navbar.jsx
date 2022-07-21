@@ -1,7 +1,9 @@
 //imports
 import React, {useState} from 'react'
 import Logo from '../assets/logo.png'
-import {FaBars, FaTimes} from 'react-icons/fa'
+import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa'
+import {HiOutlineMail} from 'react-icons/hi'
+import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 //nav-bar made with tailwind
 const Navbar = () => {
@@ -39,8 +41,38 @@ const Navbar = () => {
             </ul>
 
             {/*social media icons*/}
-            <div className='hidden'>
-
+            <div className='hidden md:flex fixed flex-col top-[35%] left-0'>
+                <ul>
+                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
+                        <a className='flex justify-between items-center w-full text-gray-300' 
+                            href="https://www.linkedin.com/in/andres-parra-arze-a62634114/" target={'blank'} >
+                            Linkedin <FaLinkedin size={25} />
+                        </a>
+                    </li>
+                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gray-750'>
+                        <a className='flex justify-between items-center w-full text-gray-300' 
+                            href="https://github.com/andresparraarze" target={'blank'} >
+                            Github <FaGithub size={25} />
+                        </a>
+                    </li>
+                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-700'>
+                        <a className='flex justify-between items-center w-full text-gray-300' 
+                            href="/" target={'blank'} >
+                            Mail <HiOutlineMail size={25} />
+                        </a>
+                    </li>
+                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-green-700'>
+                        <a className='flex justify-between items-center w-full text-gray-300' 
+                            href="/" target={'blank'} >
+                            Resume <BsFillPersonLinesFill size={25} />
+                        </a>
+                    </li>                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-700'>
+                        <a className='flex justify-between items-center w-full text-gray-300' 
+                            href="https://m.facebook.com/people/Andres-Parra-Arze/100008705084352" target={'blank'} >
+                            Facebook <FaFacebook size={25} />
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     )
