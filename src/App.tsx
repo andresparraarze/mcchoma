@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Homemain from "./components/Homemain";
 import Navbar from "./components/Navbar";
 
@@ -7,6 +8,7 @@ function App() {
     <div >
       <Navbar/>
       <Homemain/>
+      <About/>
     </div>
   );
 }
