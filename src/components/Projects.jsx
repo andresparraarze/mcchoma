@@ -25,10 +25,10 @@ const Projects = () => {
                             JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/">
+                            <a href="https://pooja3093.github.io/refactored-succotash-/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="https://github.com/Pooja3093/refactored-succotash-.git" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -42,10 +42,10 @@ const Projects = () => {
                             JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/">
+                            <a href="https://limitless-river-58971.herokuapp.com/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="https://github.com/andresparraarze/pejisaurio2000.git" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -59,10 +59,10 @@ const Projects = () => {
                             JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -76,10 +76,10 @@ const Projects = () => {
                             JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -93,10 +93,10 @@ const Projects = () => {
                             JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -110,10 +110,10 @@ const Projects = () => {
                             JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -127,10 +127,10 @@ const Projects = () => {
                             JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -144,10 +144,10 @@ const Projects = () => {
                             JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
