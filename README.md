@@ -14,7 +14,9 @@ A modern porfolio which utlizes react, typescript and tailwind in order to showc
 get the code, then run npm i in order to get all of the packages needed, then run npm start and it should be running
 
 ## Usage
-just go through the website, you have multiple options to choose from, you can go to the portfolio through this link: 
+just go through the website, you have multiple options to choose from.
+you can see a video here: https://drive.google.com/file/d/1SqJvp1CvmOIsJ_majTJVTixvqpFxM4oD/view
+and you can go to the portfolio through this link: https://andresparraarze.github.io/mcchoma/
 
 ## GitHub
 andresparraarze
