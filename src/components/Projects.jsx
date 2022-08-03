@@ -1,6 +1,7 @@
 import React from 'react'
 import NewsProject from '../assets/news.png'
 import BookProject from '../assets/book-project.jpeg'
+import Project3 from '../assets/project-3.png'
 
 const Projects = () => {
   return (
@@ -53,16 +54,16 @@ const Projects = () => {
                 </div>
 
                 {/*third project*/}               
-                <div style={{backgroundImage: `url(${NewsProject})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
+                <div style={{backgroundImage: `url(${Project3})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
-                            JavaScript Application
+                            MERN Stack Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/" target={'blank'}>
+                            <a href="https://damp-earth-50504.herokuapp.com/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/" target={'blank'}>
+                            <a href="https://github.com/andresparraarze/project-3.git" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
