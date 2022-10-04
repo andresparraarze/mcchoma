@@ -1,4 +1,7 @@
 import React from 'react'
+import ComingSoon from '../assets/coming-soon.jpeg'
+import NoteTaker from '../assets/notetaker.png'
+import WeatherDashBoard from '../assets/weatherdashboard.png'
 import NewsProject from '../assets/news.png'
 import BookProject from '../assets/book-project.jpeg'
 import Project3 from '../assets/project-3.png'
@@ -20,16 +23,16 @@ const Projects = () => {
             <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-4'>
                 
                 {/*First project*/}               
-                <div style={{backgroundImage: `url(${NewsProject})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
+                <div style={{backgroundImage: `url(${WeatherDashBoard})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
-                            JavaScript Application
+                            Weather JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="https://pooja3093.github.io/refactored-succotash-/" target={'blank'}>
+                            <a href="https://andresparraarze.github.io/mega-dash/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="https://github.com/Pooja3093/refactored-succotash-.git" target={'blank'}>
+                            <a href="https://github.com/andresparraarze/mega-dash.git" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -40,7 +43,7 @@ const Projects = () => {
                 <div style={{backgroundImage: `url(${BookProject})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
-                            JavaScript Application
+                            Book Application
                         </span>
                         <div className='pt-8 text-center '>
                             <a href="https://limitless-river-58971.herokuapp.com/" target={'blank'}>
@@ -57,7 +60,7 @@ const Projects = () => {
                 <div style={{backgroundImage: `url(${Project3})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
-                            MERN Stack Application
+                            MERN E-commerce Application
                         </span>
                         <div className='pt-8 text-center '>
                             <a href="https://damp-earth-50504.herokuapp.com/" target={'blank'}>
@@ -71,16 +74,16 @@ const Projects = () => {
                 </div>
 
                 {/*Fourth Project*/}
-                <div style={{backgroundImage: `url(${BookProject})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
+                <div style={{backgroundImage: `url(${NoteTaker})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
-                            JavaScript Application
+                            Note Taker JavaScript Application
                         </span>
                         <div className='pt-8 text-center '>
-                            <a href="/" target={'blank'}>
+                            <a href="https://secure-earth-88936.herokuapp.com/" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Live Demo</button>
                             </a>
-                            <a href="/" target={'blank'}>
+                            <a href="https://github.com/andresparraarze/majadito25.git" target={'blank'}>
                                 <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-600 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -88,7 +91,7 @@ const Projects = () => {
                 </div>
 
                 {/*Fifth project*/}               
-                <div style={{backgroundImage: `url(${NewsProject})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
+                <div style={{backgroundImage: `url(${ComingSoon})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
                             JavaScript Application
@@ -105,7 +108,7 @@ const Projects = () => {
                 </div>
 
                 {/*Sixth Project*/}
-                <div style={{backgroundImage: `url(${BookProject})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
+                <div style={{backgroundImage: `url(${ComingSoon})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
                             JavaScript Application
@@ -122,7 +125,7 @@ const Projects = () => {
                 </div>
 
                 {/*Seventh project*/}               
-                <div style={{backgroundImage: `url(${NewsProject})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
+                <div style={{backgroundImage: `url(${ComingSoon})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
                             JavaScript Application
@@ -139,7 +142,7 @@ const Projects = () => {
                 </div>
 
                 {/*Eight Project*/}
-                <div style={{backgroundImage: `url(${BookProject})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
+                <div style={{backgroundImage: `url(${ComingSoon})`}} className='shadow-lg shadow-[#464650] group container rounded-md flex justify-center items-center mx-auto div-content'>
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-black tracking-wider'>
                             JavaScript Application

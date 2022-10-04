@@ -10,7 +10,7 @@ const Homemain = () => {
             <p className='text-2xl text-yellow-400'>Hello I am</p>
             <h1 className='text-4xl sm:text-6xl font-bold text-gray-200'>Andres Parra Arze</h1>
             <h2 className='text-3xl sm:text-5xl font-bold text-gray-400'>Full Stack Web Developer </h2>
-            <p className='text-gray-200 py-4 max-w-[700px]'>I specialize in the front end area and make very interactive experiences,
+            <p className='text-gray-200 py-4 max-w-[700px]'>I specialize in the front end area to create interactive experiences,
                 i can make full stack web applications with very modern up to date resources
             </p>
             <div>
