@@ -20,7 +20,7 @@ const About = () => {
                         <p>
                             Software Developer utilizing a business background in order to create challenging
                             projects that stand out from the competition. Certification earned through University of
-                            Toronto, the set of skills I have mastered are JavaScript, jQuery, Node.js, React,
+                            Toronto, the set of skills I have mastered are JavaScript, Node.js, React,
                             MongoDB, MySQL, CSS, Sass and Tailwind. I can utilize these tools to create a
                             responsive and interactive web design, I like to focus on the front end since I love the
                             creativity and thought process that needs to be put into it. I have made multiple projects
