@@ -1,122 +1,122 @@
-//imports
-import React, {useState} from 'react'
-import Logo from '../assets/logo.png'
-import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
-import{Link} from 'react-scroll'
+import React, { useState } from 'react';
+import { FaBars, FaFacebook, FaGithub, FaLinkedin, FaTimes } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { Link } from 'react-scroll';
+import Logo from '../assets/logo.png';
 
-//nav-bar
+const navItems = [
+  { to: 'homemain', label: 'Home' },
+  { to: 'about', label: 'About' },
+  { to: 'skills', label: 'Skills' },
+  { to: 'projects', label: 'Projects' },
+  { to: 'contact-form', label: 'Contact' },
+];
+
+const socialLinks = [
+  {
+    label: 'Linkedin',
+    href: 'https://www.linkedin.com/in/andres-parra-arze-a62634114/',
+    icon: FaLinkedin,
+    backgroundClass: 'bg-blue-600',
+  },
+  {
+    label: 'Github',
+    href: 'https://github.com/andresparraarze',
+    icon: FaGithub,
+    backgroundClass: 'bg-gray-700',
+  },
+  {
+    label: 'Mail',
+    href: 'mailto:andresparraarze@gmail.com?subject=Portfolio Contact',
+    icon: HiOutlineMail,
+    backgroundClass: 'bg-red-700',
+  },
+  {
+    label: 'Resume',
+    href: 'https://drive.google.com/file/d/15c6bbhNmrsqrOmMdx8vg2NQJB2aICIc3/view?usp=sharing',
+    icon: BsFillPersonLinesFill,
+    backgroundClass: 'bg-green-700',
+  },
+  {
+    label: 'Facebook',
+    href: 'https://m.facebook.com/people/Andres-Parra-Arze/100008705084352',
+    icon: FaFacebook,
+    backgroundClass: 'bg-blue-700',
+  },
+];
+
 const Navbar = () => {
-    const [nav, setNav] = useState(false)
-    const handleClick = () => setNav(!nav)
+  const [navOpen, setNavOpen] = useState(false);
 
-    return (
-        //logo
-        <div className='fixed w-full h-[90px] flex justify-between items-center px-4 bg-[#19191b] text-gray-300'>
-            <div>
-                <img style={{width: '138px'}} src={Logo} alt="Logo Parra" />
-            </div>
+  const handleToggleMenu = () => setNavOpen((prevState) => !prevState);
+  const closeMenu = () => setNavOpen(false);
 
-            {/*Buttons nav bar */}
-                <ul className='hidden md:flex'>
-                    <li>
-                        <Link to="homemain" smooth={true} offset={50} duration={500}>
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="about" smooth={true} offset={50} duration={500}>
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="skills" smooth={true} offset={50} duration={500}>
-                            Skills
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="projects" smooth={true} offset={50} duration={500}>
-                            Projects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="contact-form" smooth={true} offset={50} duration={500}>
-                            Contact
-                        </Link>
-                    </li>
-                </ul>
+  return (
+    <header className='fixed z-20 h-[90px] w-full bg-[#19191b] px-4 text-gray-300'>
+      <nav className='flex h-full items-center justify-between' aria-label='Primary'>
+        <img style={{ width: '138px' }} src={Logo} alt='Logo Parra' />
 
-            {/*Nav bar icon */}
-            <div onClick={handleClick} className='md:hidden z-10'>
-                {!nav ? <FaBars/> : <FaTimes/> }
-            </div>
+        <ul className='hidden md:flex'>
+          {navItems.map((item) => (
+            <li key={item.to}>
+              <Link to={item.to} smooth offset={50} duration={500}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-            {/*Menu mobile version made */}
-            <ul className={ !nav ? 'hidden' : 'absolute top-0 left-0 w-full bg-[#19191b] h-screen flex flex-col justify-center items-center'}>
-                <li className='py-6 text-4xl'>
-                    <Link onClick={handleClick} to="homemain" smooth={true} offset={50} duration={500}>
-                        Home
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    <Link onClick={handleClick} to="about" smooth={true} offset={50} duration={500}>
-                        About
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    <Link onClick={handleClick} to="skills" smooth={true} offset={50} duration={500}>
-                        Skills
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    <Link onClick={handleClick} to="projects" smooth={true} offset={50} duration={500}>
-                        Projects
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    <Link onClick={handleClick} to="contact-form" smooth={true} offset={50} duration={500}>
-                        Contact
-                    </Link>
-                </li>
-            </ul>
+        <button
+          type='button'
+          onClick={handleToggleMenu}
+          className='z-10 md:hidden'
+          aria-controls='mobile-menu'
+          aria-expanded={navOpen}
+          aria-label={navOpen ? 'Close mobile menu' : 'Open mobile menu'}
+        >
+          {navOpen ? <FaTimes /> : <FaBars />}
+        </button>
 
-            {/*social media icons*/}
-            <div className='hidden md:flex fixed flex-col top-[35%] left-0'>
-                <ul>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-                        <a className='flex justify-between items-center w-full text-gray-300' 
-                            href="https://www.linkedin.com/in/andres-parra-arze-a62634114/" target={'blank'} >
-                            Linkedin <FaLinkedin size={25} />
-                        </a>
-                    </li>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gray-750'>
-                        <a className='flex justify-between items-center w-full text-gray-300' 
-                            href="https://github.com/andresparraarze" target={'blank'} >
-                            Github <FaGithub size={25} />
-                        </a>
-                    </li>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-700'>
-                        <a className='flex justify-between items-center w-full text-gray-300' 
-                            href="mailto:andresparraarze@gmail.com?subject=Portfolio Contact" target={'blank'}>
-                            Mail <HiOutlineMail size={25} />
-                        </a>
-                    </li>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-green-700'>
-                        <a className='flex justify-between items-center w-full text-gray-300' 
-                            href="https://drive.google.com/file/d/15c6bbhNmrsqrOmMdx8vg2NQJB2aICIc3/view?usp=sharing" target={'blank'} >
-                            Resume <BsFillPersonLinesFill size={25} />
-                        </a>
-                    </li>                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-700'>
-                        <a className='flex justify-between items-center w-full text-gray-300' 
-                            href="https://m.facebook.com/people/Andres-Parra-Arze/100008705084352" target={'blank'} >
-                            Facebook <FaFacebook size={25} />
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <ul
+          id='mobile-menu'
+          className={
+            !navOpen
+              ? 'hidden'
+              : 'absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-[#19191b]'
+          }
+        >
+          {navItems.map((item) => (
+            <li key={item.to} className='py-6 text-4xl'>
+              <Link onClick={closeMenu} to={item.to} smooth offset={50} duration={500}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className='fixed left-0 top-[35%] hidden md:flex flex-col'>
+          <ul>
+            {socialLinks.map(({ label, href, icon: Icon, backgroundClass }) => (
+              <li
+                key={label}
+                className={`ml-[-100px] flex h-[60px] w-[160px] items-center justify-between duration-300 hover:ml-[-10px] ${backgroundClass}`}
+              >
+                <a
+                  className='flex w-full items-center justify-between text-gray-300'
+                  href={href}
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  {label} <Icon size={25} />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-    )
-}
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;
