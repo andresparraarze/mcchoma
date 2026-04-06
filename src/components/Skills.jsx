@@ -14,25 +14,27 @@ const skills = [
   { name: 'MySQL', image: Mysql, alt: 'MySQL icon' },
   { name: 'MongoDB', image: Mongo, alt: 'MongoDB icon' },
   { name: 'React', image: ReactImg, alt: 'React icon' },
-  { name: 'Tailwind', image: Tailwind, alt: 'Tailwind icon' },
-  { name: 'Node', image: Node, alt: 'Node icon' },
+  { name: 'Tailwind CSS', image: Tailwind, alt: 'Tailwind icon' },
+  { name: 'Node.js', image: Node, alt: 'Node.js icon' },
   { name: 'GitHub', image: GitHub, alt: 'GitHub icon' },
 ];
 
 const Skills = () => {
   return (
-    <section name='skills' className='h-screen w-full bg-[#19191b] text-gray-300'>
-      <div className='mx-auto flex h-full w-full max-w-[1000px] flex-col justify-center p-4'>
-        <div>
-          <h2 className='inline border-b-4 border-yellow-500 text-4xl font-bold'>Skills and Experience</h2>
-          <p className='py-4'>I have made projects and worked with:</p>
-        </div>
-        <div className='grid w-full grid-cols-2 gap-4 py-8 text-center sm:grid-cols-4'>
+    <section name='skills'>
+      <div className='section-shell'>
+        <h2 className='section-title'>Skills and Experience</h2>
+        <p className='section-subtitle'>Core tools I use to design, build, and ship modern web applications.</p>
+
+        <div className='mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
           {skills.map((skill) => (
-            <div key={skill.name} className='shadow-md shadow-[#3b3b3d] duration-500 hover:scale-110'>
-              <img className='mx-auto w-20' src={skill.image} alt={skill.alt} />
-              <p className='my-4'>{skill.name}</p>
-            </div>
+            <article
+              key={skill.name}
+              className='surface flex flex-col items-center justify-center gap-4 p-6 text-center hover:-translate-y-1 hover:border-amber-300/40'
+            >
+              <img className='h-16 w-16 object-contain' src={skill.image} alt={skill.alt} loading='lazy' />
+              <p className='font-medium text-gray-50'>{skill.name}</p>
+            </article>
           ))}
         </div>
       </div>

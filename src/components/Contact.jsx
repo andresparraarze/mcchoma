@@ -2,45 +2,59 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section name='contact-form' className='flex h-screen w-full items-center justify-center bg-[#19191b] p-4'>
-      <form
-        className='flex w-full max-w-[600px] flex-col'
-        method='POST'
-        action='https://getform.io/f/5f8cb07f-0b33-4132-b1e9-fba94e036cfa'
-      >
-        <div className='pb-8'>
-          <h2 className='inline border-b-4 border-yellow-500 text-4xl font-bold text-gray-200'>Contact</h2>
-          <p className='py-4 text-gray-200'>Submit the form to be contacted or send me an Email.</p>
+    <section name='contact-form'>
+      <div className='section-shell'>
+        <div className='surface mx-auto max-w-3xl p-8 md:p-10'>
+          <h2 className='section-title'>Contact</h2>
+          <p className='section-subtitle mt-3'>Have a project idea or collaboration in mind? Send a message.</p>
+
+          <form
+            className='mt-8 flex flex-col gap-4'
+            method='POST'
+            action='https://getform.io/f/5f8cb07f-0b33-4132-b1e9-fba94e036cfa'
+          >
+            <label htmlFor='name' className='text-sm font-medium text-gray-100'>
+              Name
+            </label>
+            <input
+              id='name'
+              className='rounded-xl border border-gray-600 bg-gray-800 px-4 py-3 text-gray-50 placeholder:text-gray-400 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300/60'
+              type='text'
+              placeholder='Your name'
+              name='name'
+              required
+            />
+
+            <label htmlFor='email' className='text-sm font-medium text-gray-100'>
+              Email
+            </label>
+            <input
+              id='email'
+              className='rounded-xl border border-gray-600 bg-gray-800 px-4 py-3 text-gray-50 placeholder:text-gray-400 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300/60'
+              type='email'
+              placeholder='you@example.com'
+              name='email'
+              required
+            />
+
+            <label htmlFor='message' className='text-sm font-medium text-gray-100'>
+              Message
+            </label>
+            <textarea
+              id='message'
+              className='min-h-40 rounded-xl border border-gray-600 bg-gray-800 px-4 py-3 text-gray-50 placeholder:text-gray-400 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300/60'
+              name='message'
+              rows='8'
+              placeholder='Tell me a little about your project or goals.'
+              required
+            />
+
+            <button type='submit' className='primary-button mt-2 w-fit'>
+              Send Message
+            </button>
+          </form>
         </div>
-
-        <label htmlFor='name' className='mb-1 text-gray-200'>
-          Name
-        </label>
-        <input id='name' className='bg-[#e9ef95] p-2' type='text' placeholder='Name' name='name' required />
-
-        <label htmlFor='email' className='mb-1 mt-4 text-gray-200'>
-          Email
-        </label>
-        <input id='email' className='bg-[#e9ef95] p-2' type='email' placeholder='Email' name='email' required />
-
-        <label htmlFor='message' className='mb-1 mt-4 text-gray-200'>
-          Message
-        </label>
-        <textarea
-          id='message'
-          className='bg-[#e9ef95] p-2'
-          name='message'
-          rows='10'
-          placeholder='Message'
-          required
-        />
-        <button
-          type='submit'
-          className='mx-auto my-8 flex items-center border-2 px-4 py-3 text-white hover:border-yellow-500 hover:bg-yellow-500'
-        >
-          Submit
-        </button>
-      </form>
+      </div>
     </section>
   );
 };
