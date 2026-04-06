@@ -1,37 +1,48 @@
-import React from 'react'
+import React from 'react';
 
 const Contact = () => {
   return (
-    <div name='contact-form' className='w-full h-screen bg-[#19191b] flex justify-center items-center p-4'>
-        <form className='flex flex-col max-w-[600px] w-full' 
-            method='POST' action="https://getform.io/f/5f8cb07f-0b33-4132-b1e9-fba94e036cfa">
-            <div className='pb-8'>
-                <p className='text-4xl font-bold inline border-b-4 border-yellow-500 text-gray-200'>
-                    Contact
-                </p>
-                <p className='text-gray-200 py-4'>
-                    Submit the form to be contacted or send me an Email
-                </p>
-            </div>
+    <section name='contact-form' className='flex h-screen w-full items-center justify-center bg-[#19191b] p-4'>
+      <form
+        className='flex w-full max-w-[600px] flex-col'
+        method='POST'
+        action='https://getform.io/f/5f8cb07f-0b33-4132-b1e9-fba94e036cfa'
+      >
+        <div className='pb-8'>
+          <h2 className='inline border-b-4 border-yellow-500 text-4xl font-bold text-gray-200'>Contact</h2>
+          <p className='py-4 text-gray-200'>Submit the form to be contacted or send me an Email.</p>
+        </div>
 
-            {/*Name on form*/}
-            <input className='bg-[#e9ef95] p-2'
-            type="text" placeholder='Name' name='name'/>
+        <label htmlFor='name' className='mb-1 text-gray-200'>
+          Name
+        </label>
+        <input id='name' className='bg-[#e9ef95] p-2' type='text' placeholder='Name' name='name' required />
 
-            {/*Email on form*/}
-            <input className='my-4 p-2 bg-[#e9ef95]'
-            type="email" placeholder='Email' name='email'/>
+        <label htmlFor='email' className='mb-1 mt-4 text-gray-200'>
+          Email
+        </label>
+        <input id='email' className='bg-[#e9ef95] p-2' type='email' placeholder='Email' name='email' required />
 
-            {/*Text on form*/}
-            <textarea className='bg-[#e9ef95] p-2'
-                name="message" rows="10" placeholder='Message'>
-            </textarea>
-            <button className='text-white border-2 hover:bg-yellow-500 hover:border-yellow-500 px-4 py-3 my-8 mx-auto flex items-center'>
-                Submit
-            </button>
-        </form>
-    </div>
-  )
-}
+        <label htmlFor='message' className='mb-1 mt-4 text-gray-200'>
+          Message
+        </label>
+        <textarea
+          id='message'
+          className='bg-[#e9ef95] p-2'
+          name='message'
+          rows='10'
+          placeholder='Message'
+          required
+        />
+        <button
+          type='submit'
+          className='mx-auto my-8 flex items-center border-2 px-4 py-3 text-white hover:border-yellow-500 hover:bg-yellow-500'
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+  );
+};
 
-export default Contact
+export default Contact;
