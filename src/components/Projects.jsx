@@ -30,8 +30,8 @@ const projects = [
     liveDemoUrl: 'https://secure-earth-88936.herokuapp.com/',
     codeUrl: 'https://github.com/andresparraarze/majadito25.git',
   },
-  ...Array.from({ length: 4 }, (_, index) => ({
-    title: `JavaScript Application ${index + 1}`,
+  ...Array.from({ length: 2 }, (_, index) => ({
+    title: `Coming Soon Project ${index + 1}`,
     image: ComingSoon,
     liveDemoUrl: '/',
     codeUrl: '/',
@@ -40,43 +40,53 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section name='projects' className='w-full bg-[#19191b] text-gray-300 md:h-screen'>
-      <div className='mx-auto flex h-full w-full max-w-[1000px] flex-col justify-center p-4'>
-        <div className='pb-8'>
-          <h2 className='inline border-b-4 border-yellow-500 text-4xl font-bold'>Projects</h2>
-          <p className='py-6'>These are some of my most recent projects:</p>
-        </div>
+    <section name='projects'>
+      <div className='section-shell'>
+        <h2 className='section-title'>Projects</h2>
+        <p className='section-subtitle'>A curated set of recent builds that highlight my front-end and full-stack work.</p>
 
-        <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-4'>
-          {projects.map((project) => (
-            <article
-              key={project.title}
-              style={{ backgroundImage: `url(${project.image})` }}
-              className='group container mx-auto flex items-center justify-center rounded-md shadow-lg shadow-[#464650] div-content'
-            >
-              <div className='opacity-0 group-hover:opacity-100'>
-                <span className='text-2xl font-bold tracking-wider text-black'>{project.title}</span>
-                <div className='pt-8 text-center'>
-                  <a
-                    href={project.liveDemoUrl}
-                    target='_blank'
-                    rel='noreferrer noopener'
-                    className='m-2 inline-block rounded-lg bg-white px-3 py-3 text-center text-lg font-bold text-gray-600'
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.codeUrl}
-                    target='_blank'
-                    rel='noreferrer noopener'
-                    className='m-2 inline-block rounded-lg bg-white px-3 py-3 text-center text-lg font-bold text-gray-600'
-                  >
-                    Code
-                  </a>
+        <div className='mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+          {projects.map((project) => {
+            const isComingSoon = project.liveDemoUrl === '/';
+
+            return (
+              <article key={project.title} className='surface overflow-hidden'>
+                <img src={project.image} alt={`${project.title} preview`} className='h-48 w-full object-cover' loading='lazy' />
+
+                <div className='space-y-4 p-5'>
+                  <h3 className='text-lg font-semibold text-gray-50'>{project.title}</h3>
+                  <div className='flex flex-wrap gap-3'>
+                    <a
+                      href={project.liveDemoUrl}
+                      target='_blank'
+                      rel='noreferrer noopener'
+                      aria-disabled={isComingSoon}
+                      className={`rounded-lg px-4 py-2 text-sm font-semibold ${
+                        isComingSoon
+                          ? 'cursor-not-allowed bg-gray-700 text-gray-300 pointer-events-none'
+                          : 'bg-amber-400 text-gray-800 hover:bg-amber-300'
+                      }`}
+                    >
+                      Live Demo
+                    </a>
+                    <a
+                      href={project.codeUrl}
+                      target='_blank'
+                      rel='noreferrer noopener'
+                      aria-disabled={isComingSoon}
+                      className={`rounded-lg border px-4 py-2 text-sm font-semibold ${
+                        isComingSoon
+                          ? 'cursor-not-allowed border-gray-600 text-gray-400 pointer-events-none'
+                          : 'border-gray-400 text-gray-50 hover:border-gray-200 hover:bg-gray-700'
+                      }`}
+                    >
+                      View Code
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

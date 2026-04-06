@@ -1,30 +1,31 @@
-import React from 'react'
-import {HiArrowNarrowRight} from 'react-icons/hi'
-import{Link} from 'react-scroll'
+import React from 'react';
+import { HiArrowNarrowRight } from 'react-icons/hi';
+import { Link } from 'react-scroll';
 
 const Homemain = () => {
   return (
-    <div name='homemain' className='w-full h-screen bg-[#19191b]'>
+    <section name='homemain' className='flex min-h-screen items-center'>
+      <div className='section-shell pt-32'>
+        <p className='text-sm font-semibold uppercase tracking-[0.2em] text-amber-300'>Hello, I am</p>
+        <h1 className='mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-6xl'>Andres Parra Arze</h1>
+        <h2 className='mt-3 text-2xl font-semibold text-gray-200 sm:text-4xl'>Full-Stack Web Developer</h2>
+        <p className='section-subtitle'>
+          I build fast, accessible, and scalable web experiences with a strong focus on front-end interaction,
+          thoughtful design, and reliable full-stack implementation.
+        </p>
 
-        <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-            <p className='text-2xl text-yellow-400'>Hello I am</p>
-            <h1 className='text-4xl sm:text-6xl font-bold text-gray-200'>Andres Parra Arze</h1>
-            <h2 className='text-3xl sm:text-5xl font-bold text-gray-400'>Full Stack Web Developer </h2>
-            <p className='text-gray-200 py-4 max-w-[700px]'>I specialize in the front end area to create interactive experiences,
-                i can make full stack web applications with very modern up to date resources
-            </p>
-            <div>
-                <Link to="projects" smooth={true} offset={50} duration={500}>
-                    <button className='text-white group border-2 px-5 py-2 my-2 flex items-center hover:bg-yellow-500 hover:border-yellow-500 hover:pr-1 duration-300 hover:pb-4'> Projects 
-                        <span className='group-hover:rotate-90 duration-300'>
-                            <HiArrowNarrowRight className='ml-4'/> 
-                        </span>
-                    </button>
-                </Link>
-            </div>
+        <div className='mt-10 flex flex-wrap gap-4'>
+          <Link to='projects' smooth offset={-70} duration={500} className='primary-button cursor-pointer'>
+            View Projects
+            <HiArrowNarrowRight className='text-lg' />
+          </Link>
+          <Link to='contact-form' smooth offset={-70} duration={500} className='secondary-button cursor-pointer'>
+            Contact Me
+          </Link>
         </div>
-    </div>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Homemain
+export default Homemain;
